@@ -85,9 +85,5 @@ public class Customer{
    public IntegerProperty personenzahl(){
       return personenzahl;
    }
-
-   
-   
-   
    
 }

@@ -16,7 +16,7 @@ public class Project {
     public Project() {
         bookings = new ArrayList();
     }
-
+    
     /**
      * Returns all bookings in this project
      * 

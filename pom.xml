@@ -21,11 +21,11 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- <dependency>
+    <dependency>
         <groupId>eu.zoho.chaotx</groupId>
         <artifactId>cryptx</artifactId>
         <version>0.1.0</version>
-    </dependency> -->
+    </dependency>
   </dependencies>
 
   <build>

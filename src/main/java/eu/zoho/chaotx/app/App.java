@@ -1,5 +1,6 @@
 package eu.zoho.chaotx.app;
 
+import eu.zoho.chaotx.app.gui.dialog.BookingFormDialog;
 import eu.zoho.chaotx.app.gui.dialog.WiWoWaDialog;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -30,7 +31,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage unused) {
-        WiWoWaDialog wiwowa = new WiWoWaDialog(unused);
-        wiwowa.showView();
+        BookingFormDialog bfd = new BookingFormDialog(unused);
+        bfd.showView();
     }
 }

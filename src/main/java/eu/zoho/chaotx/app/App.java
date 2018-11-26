@@ -1,10 +1,10 @@
 package eu.zoho.chaotx.app;
 
-import java.io.File;
-
+import eu.zoho.chaotx.app.gui.dialog.WiWoWaDialog;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
+import java.io.File;
 
 /**
  * Application for managing booking and user
@@ -30,6 +30,7 @@ public class App extends Application {
     
     @Override
     public void start(Stage unused) {
-        Platform.exit();
+        WiWoWaDialog wiwowa = new WiWoWaDialog(unused);
+        wiwowa.showView();
     }
 }

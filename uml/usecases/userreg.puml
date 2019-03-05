@@ -1,0 +1,42 @@
+@startuml User Usecases
+left to right direction
+
+:User: as user
+:Visitor: as visitor
+
+rectangle WiWoWa{
+   rectangle "User Managment"{
+      (Register as User) as register
+      (Login as User) as login
+      (Logout) as logout
+   }
+
+   rectangle "Booking Managment"{
+      (List Bookings) as listbks
+      (Create Booking) as createbc
+      (Edit Booking) as edit
+      (Remove Booking) as remove
+      (Select Booking) as select
+   }
+}
+
+visitor -- login
+visitor -- register
+user -- logout
+user -- listbks
+user -- createbc
+user -- remove
+user -- select
+register .> login: include
+edit .> createbc: extends
+
+note right of edit
+   Condition: User selected
+   a booking from the shown
+   list of bookings
+end note
+
+note right of logout 
+   User becomes Visitor
+end note
+@enduml

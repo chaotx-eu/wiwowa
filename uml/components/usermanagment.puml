@@ -1,0 +1,9 @@
+@startuml
+   left to right direction
+   
+   [Logout] as logout
+   [Register as User] as register
+   [Login as User] as user 
+
+   register -> user: use
+@enduml

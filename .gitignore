@@ -1,6 +1,7 @@
 ## vscode
 #.settings
 .vscode
+docs
 
 ## build
 target

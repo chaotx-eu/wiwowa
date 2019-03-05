@@ -1,0 +1,45 @@
+@startuml User Usecases
+left to right direction
+
+:User: as usr
+:Visitor: as vsr
+
+rectangle WiWoWa {
+    rectangle "User Management" {
+        (Register as User) as reg
+        (Login as User) as logi
+        (Logout) as logo
+    }
+
+    rectangle "Booking Management" {
+        (Create Booking) as createbk
+        (Remove Booking) as removebk
+        (List Bookings) as listbks
+        (Select Booking) as selectbk
+        (Edit Booking) as editbk
+    }
+
+    vsr -- reg
+    vsr -- logi
+    usr -- logo
+    usr -- createbk
+    usr -- removebk
+    usr -- listbks
+    usr -- selectbk
+    usr -- editbk
+
+    selectbk .> listbks: include
+    editbk .> selectbk: include
+    removebk .> editbk: include
+    reg .> logi: include
+    
+    note right of logo : User becomes a Visitor
+    note right of createbk: Opens "New Booking"-Form
+    note right of removebk: Confirmation required
+    note right of selectbk: Shows selected booking data
+    note right of editbk: Enables editation of booking data
+    note right of listbks: Lists bookings accessible by this user
+}
+
+
+@enduml
